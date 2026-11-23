@@ -1,0 +1,38 @@
+{
+  "name": "losk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Лоск — химчистка мебели на дому. PWA-сайт с калькулятором, заявками и кабинетом владельца.",
+  "scripts": {
+    "dev": "next dev -p 3210",
+    "build": "next build",
+    "start": "next start -p 3210",
+    "typecheck": "tsc --noEmit",
+    "seed": "node scripts/seed.mjs",
+    "case:pdf": "node scripts/make-pdf.mjs",
+    "pentest": "node scripts/pentest.mjs",
+    "e2e:photo": "node scripts/e2e-photo.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.0.0",
+    "framer-motion": "^12.43.0",
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "three": "^0.169.0",
+    "web-push": "^3.6.7",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.169.0",
+    "@types/web-push": "^3.6.4",
+    "prettier": "^3.10.1",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.7.0"
+  }
+}

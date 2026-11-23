@@ -1,0 +1,22 @@
+node_modules
+.next
+out
+build
+dist
+
+# runtime data and secrets never belong in an image
+data
+.env
+.env.local
+.env*.local
+secrets.json
+
+# local artefacts
+docs
+security/reports
+public/docs
+tsconfig.tsbuildinfo
+next-env.d.ts
+.git
+.vscode
+*.log

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1200px; height: 630px; overflow: hidden; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Arial, sans-serif;
+        background: #fbfbfd;
+        color: #14161a;
+        letter-spacing: -0.03em;
+        position: relative;
+      }
+      .glow {
+        position: absolute; inset: 0;
+        background:
+          radial-gradient(46% 62% at 88% 12%, rgba(18, 182, 166, 0.20), transparent 68%),
+          radial-gradient(44% 58% at 6% 96%, rgba(243, 238, 230, 0.95), transparent 70%);
+      }
+      .inner { position: relative; padding: 72px 80px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+      .brand { display: flex; align-items: center; gap: 16px; }
+      .tile {
+        width: 58px; height: 58px; border-radius: 17px;
+        background: radial-gradient(120% 120% at 18% 8%, #2ee0cb, #12b6a6 42%, #0a8f84 100%);
+        display: grid; place-items: center;
+        box-shadow: 0 14px 34px -14px rgba(10, 143, 132, 0.7);
+      }
+      .tile svg { width: 32px; height: 32px; }
+      .brandname { font-size: 30px; font-weight: 650; }
+      .brandname span { color: #0fb6a6; }
+      h1 { font-size: 68px; line-height: 1.02; font-weight: 660; max-width: 780px; }
+      h1 em { font-style: normal; color: #07867a; }
+      .sub { margin-top: 18px; font-size: 25px; color: #4a4f58; font-weight: 400; letter-spacing: -0.01em; }
+      .chips { display: flex; gap: 12px; }
+      .chip {
+        display: inline-flex; align-items: center; gap: 9px;
+        border: 1px solid #e8eaec; background: #fff;
+        border-radius: 999px; padding: 13px 22px; font-size: 21px; font-weight: 500; color: #14161a;
+      }
+      .chip b { font-weight: 660; }
+      .dot { width: 9px; height: 9px; border-radius: 50%; background: #0fb6a6; }
+      .right {
+        position: absolute; right: 76px; top: 50%; transform: translateY(-50%);
+        width: 250px; height: 250px; border-radius: 74px;
+        background: radial-gradient(120% 120% at 18% 8%, #2ee0cb, #12b6a6 44%, #0a8f84 100%);
+        display: grid; place-items: center;
+        box-shadow: 0 40px 90px -40px rgba(10, 143, 132, 0.65);
+        opacity: 0.98;
+      }
+      .right svg { width: 132px; height: 132px; opacity: 0.95; }
+      .bottom { display: flex; align-items: flex-end; justify-content: space-between; }
+      .small { font-size: 19px; color: #8b919b; letter-spacing: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="glow"></div>
+    <div class="inner">
+      <div class="brand">
+        <div class="tile">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.6c.62 4.9 2.14 6.42 7.04 7.04-4.9.62-6.42 2.14-7.04 7.04-.62-4.9-2.14-6.42-7.04-7.04C9.86 9.02 11.38 7.5 12 2.6Z" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="brandname">Лоск<span>.</span></div>
+      </div>
+
+      <div>
+        <h1>Химчистка мебели на дому <em>за 2 часа</em></h1>
+        <p class="sub">Диван, ковёр, матрас — без выноса из квартиры и без запаха</p>
+      </div>
+
+      <div class="bottom">
+        <div class="chips">
+          <span class="chip"><span class="dot"></span> Диван от <b>2 400 ₽</b></span>
+          <span class="chip">Выезд в день заявки</span>
+          <span class="chip">Гарантия 48 часов</span>
+        </div>
+        <p class="small">losk.pro · Москва</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M12 2.6c.62 4.9 2.14 6.42 7.04 7.04-4.9.62-6.42 2.14-7.04 7.04-.62-4.9-2.14-6.42-7.04-7.04C9.86 9.02 11.38 7.5 12 2.6Z" fill="#fff"/>
+        <path d="M5.1 15.9c.3 2.32.99 3.01 3.31 3.31-2.32.3-3.01.99-3.31 3.31-.3-2.32-.99-3.01-3.31-3.31 2.32-.3 3.01-.99 3.31-3.31Z" fill="#fff" opacity=".75"/>
+      </svg>
+    </div>
+  </body>
+</html>

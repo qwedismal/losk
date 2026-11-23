@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * { margin: 0; padding: 0; }
+      html, body { width: 800px; height: 600px; overflow: hidden; }
+      .fabric {
+        position: fixed; inset: 0;
+        background-color: #cdbda6;
+        background-image:
+          repeating-linear-gradient(90deg, rgba(255,255,255,.20) 0 2px, rgba(0,0,0,.055) 2px 4px),
+          repeating-linear-gradient(0deg, rgba(255,255,255,.16) 0 2px, rgba(0,0,0,.06) 2px 4px),
+          radial-gradient(120% 100% at 30% 10%, #d8c9b3, #bda98f 62%, #a6917a 100%);
+      }
+      .grain {
+        position: fixed; inset: 0; mix-blend-mode: multiply; opacity: .5;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E");
+      }
+      .stain {
+        position: fixed;
+        border-radius: 46% 54% 58% 42% / 52% 44% 56% 48%;
+        background: radial-gradient(closest-side, rgba(92,62,38,.86), rgba(112,80,50,.62) 52%, rgba(122,92,62,.18) 78%, transparent 86%);
+        filter: blur(1.2px);
+      }
+      .s1 { width: 250px; height: 190px; left: 120px; top: 130px; transform: rotate(-8deg); }
+      .s2 { width: 130px; height: 108px; left: 420px; top: 262px; transform: rotate(14deg); opacity: .82; }
+      .s3 { width: 78px; height: 66px; left: 596px; top: 158px; opacity: .62; }
+      .s4 { width: 210px; height: 150px; left: 300px; top: 400px; opacity: .45; transform: rotate(6deg); }
+      .ring {
+        position: fixed; width: 160px; height: 130px; left: 520px; top: 380px;
+        border-radius: 50%;
+        border: 12px solid rgba(96,70,44,.18);
+        filter: blur(3px);
+      }
+      .vignette {
+        position: fixed; inset: 0;
+        background: radial-gradient(120% 100% at 50% 40%, transparent 40%, rgba(60,44,28,.30) 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fabric"></div>
+    <div class="stain s1"></div>
+    <div class="stain s2"></div>
+    <div class="stain s3"></div>
+    <div class="stain s4"></div>
+    <div class="ring"></div>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+  </body>
+</html>
